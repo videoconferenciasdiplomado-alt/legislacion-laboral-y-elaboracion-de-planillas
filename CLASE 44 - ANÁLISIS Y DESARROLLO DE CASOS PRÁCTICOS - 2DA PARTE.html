@@ -756,8 +756,564 @@
 
     <div class="header-spacer"></div>
 
-    <div class="container"></div>
+    <div class="container">
+      <div class="mind-map animacion-contenido" id="mindMap">
+        <div class="section" data-section="1">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">1</span>
+              <span class="section-title">Introducción y explicación del ejemplo de planilla</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">1.1</span>
+                  <span class="subsection-title">Presentación del caso de Luciana</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Datos básicos del trabajador en el ejemplo: Sueldo básico 4.400, sin asignación familiar, adelanto de sueldo 500 incluido en ingresos. Total de remuneración mensual calculado como 4.900.</div>
+                  <div class="content-text">Descuentos y aportes aplicados: AFP 10% (490) en el primer ejemplo; en variantes posteriores se menciona 11.84% según AFP Prima. No aplica ONP en este ejemplo concreto.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=2" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:00:02)</span> </a>
+                </div>
+              </div>
+            </div>
 
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">1.2</span>
+                  <span class="subsection-title">Cálculo de renta de quinta categoría y proyección anual</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Método para proyectar remuneración anual: Multiplicó sueldo por 12 y sumó gratificaciones (julio y diciembre) consideradas como dos sueldos más. Ejemplo: sueldo anual proyectado 52.800 más gratificaciones 8.800 para cálculo total.</div>
+                  <div class="content-text">Determinación de renta neta imponible y retención mensual: Se resta exoneración de 7 UIT (UIT = 5.150 → 7×5.150 = 36.050) para obtener renta neta. En el ejemplo la renta neta resultó 25.550. Se ubica tramo en tabla SUNAT: tramo hasta 5 UIT → tasa 8%, impuesto anual 2.044 dividido entre 12 → retención mensual 170.33 (u 270.33 en otra versión según ajustes).</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=80" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:01:20)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="2">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">2</span>
+              <span class="section-title">Uso y validación de la plantilla Excel / problemas técnicos</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">2.1</span>
+                  <span class="subsection-title">Validación de datos y campos opcionales</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Columna MIS y funcionamiento: MIS se identificó como columna opcional que puede generar variaciones si no se toma en cuenta. Validación de datos y lista desplegable generó dudas; solución mediante configuración y edición habilitada.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=221" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:03:41)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">2.2</span>
+                  <span class="subsection-title">Incidencias con guardado y versiones del archivo</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Pérdida aparente de modificaciones al reabrir el archivo: Al contener comprobador de compatibilidad o versiones, algunas fórmulas o cambios no aparecían hasta recrear el archivo. Sugerencia práctica del docente: grabar y enviar versiones por correo o USB, y rehacer en nuevo archivo si falla.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=747" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:12:27)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="3">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">3</span>
+              <span class="section-title">Revisión de otros trabajadores y reglas de cálculo</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">3.1</span>
+                  <span class="subsection-title">Resumen de casos particulares expuestos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">José Plasencia Becerra: Básico 1.025, afiliado a ONP (aporte 133.25), préstamo trabajador 200, remuneración neta a pagar 691.75.</div>
+                  <div class="content-text">Cindy Ríos Mora: Básico 1.600, horas extras 26.67, total ingresos 1.626.67, AFP 162.67, comisiones y descuentos por faltas/tardanzas, neto 1.347.88.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=1138" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:18:58)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">3.2</span>
+                  <span class="subsection-title">Boletas de pago y reflejo de la planilla</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Relación entre planilla general y boletas individuales: Boleta debe reflejar exactamente los importes de la planilla (ingresos, descuentos, horas extras, faltas). Si los descuentos o detalles se calculan en hojas auxiliares, hay que incorporarlos para que la boleta jale la información automáticamente.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=1256" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:20:56)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="4">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">4</span>
+              <span class="section-title">Cálculos específicos: horas extras, faltas, tardanzas, préstamos y asignación familiar</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">4.1</span>
+                  <span class="subsection-title">Procedimiento para faltas y tardanzas</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Cálculo de descuento por falta: Sueldo mensual dividido entre 30 para obtener pago diario; si falta un día se divide entre 29 para distribuir el ajuste en ese mes en algunos ejemplos. Ejemplo: sueldo 3.600 → día 120; falta resta 120.</div>
+                  <div class="content-text">Cálculo de descuento por tardanza: Sueldo entre 30 luego entre 8 para hallar tarifa por hora; se multiplica por horas de tardanza para descuento.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=2345" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:39:05)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">4.2</span>
+                  <span class="subsection-title">Cálculo de horas extras</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Tarifas aplicadas según hora y orden: Primeras dos horas diurnas con recargo 25%. A partir de la tercera hora se aplican recargos mayores (mencionado 125% y 35% para otros casos según tipo de jornada). Ejemplos numéricos: se añadieron 25% para primeras, 125% y 35% para las posteriores en varios trabajadores.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=3059" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:50:59)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">4.3</span>
+                  <span class="subsection-title">Préstamos al trabajador y adelantos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Registro y cuota mensual de préstamos: Se registró ejemplo de préstamo 200 y se aplicó cuota mensual calculada como porcentaje (mencionado 5% en el ejemplo). Adelanto de sueldo en la planilla: si la planilla corresponde al mes siguiente, el adelanto puede figurar como descuento en la planilla actual; si es consolidado se registra distinto.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=2858" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:47:38)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">4.4</span>
+                  <span class="subsection-title">Asignación familiar</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Base y cuantía aplicadas: Asignación familiar calculada sobre la Remuneración Mínima Vital, no sobre el 10% del sueldo del trabajador. En el ejemplo se corrige el valor (mencionado 102.50 como cifra de referencia para el año vigente).</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=2441" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:40:41)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="5">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">5</span>
+              <span class="section-title">Organización, control y preparación para evaluación práctica</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">5.1</span>
+                  <span class="subsection-title">Estructura de planillas por tipo de personal</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Diferenciación entre planillas: Planilla para trabajadores activos, planilla independiente para pensionistas. Descuentos por alimentos u otros pueden estar en planilla separada o incluida según criterio del planillero o empresa.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=1373" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:22:53)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">5.2</span>
+                  <span class="subsection-title">Recomendaciones y cierre para examen/práctica calificada</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Guardado y envío de archivos: Se insistió en guardar la plantilla y enviarla por correo; usar la plantilla para la práctica de la semana siguiente.</div>
+                  <div class="content-text">Verificación de datos y modificaciones obligatorias: Actualizar UIT al año vigente (5.150 en el ejemplo), periodo de remuneración y datos de empresa (ej. UNASAC o Inversiones Pino). Uniformar códigos de empleados y revisar que boletas jalen los descuentos y cálculos realizados en la planilla general.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=776" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:12:56)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="6">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">6</span>
+              <span class="section-title">Gestión de declaraciones y uso del PDT-PLAME</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">6.1</span>
+                  <span class="subsection-title">Modificar, eliminar y validar declaraciones</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Opciones de modificaciones en declaraciones registradas: Permite consultar y modificar las tres secciones: información general, detalle de la declaración y determinación de la deuda. Tras modificar, es obligatorio grabar para que los cambios queden registrados.</div>
+                  <div class="content-text">Eliminación de declaraciones: Opción para borrar una declaración del PDT; el aplicativo solicita confirmación y la elimina definitivamente.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=3608" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:00:08)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">6.2</span>
+                  <span class="subsection-title">Consultas, proyección y copia de seguridad</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Declaraciones registradas y copia de seguridad: Módulo muestra relación de declaraciones generadas; si hay copia de seguridad aparece fecha de actualización y estado. Si no hay copia, es necesario importar o generar una; recomendación de solicitar la copia al contador y restaurarla si se requiere.</div>
+                  <div class="content-text">Proyección y uso en clase/examen: Para el examen práctico cada alumno usará un PDT y claves asignadas; se pide entregar archivos en presencia del docente.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=3751" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:02:31)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="7">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">7</span>
+              <span class="section-title">Operaciones con archivos: copiar, generar envío, recuperar y registrar</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">7.1</span>
+                  <span class="subsection-title">Copiar declaraciones entre periodos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Proceso de copia de declaración: Se puede copiar detalle del periodo de origen al periodo de destino; primero generar y grabar información general del periodo destino. Se copian indicadores y datos consistentes (trabajadores, pensionistas, personal de información y terceros) pero no datos propios de cada periodo como comprobantes o jornadas.</div>
+                  <div class="content-text">Datos que se copian y no se copian: Se copian indicadores de aporte, régimen de salud, régimen pensionario, cobertura SCTR, otros indicadores tributarios y datos de ingresos y descuentos básicos. No se copian jornada laboral, otros ingresos de quinta categoría ni comprobantes específicos de cada periodo.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=4041" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:07:21)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">7.2</span>
+                  <span class="subsection-title">Generar archivo de envío y registro de número de orden</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Generación del archivo de envío: Cuando la declaración está grabada y sin inconsistencias, desde declaraciones registradas se genera el archivo (icono de disquete). Se debe indicar si la presentación será en ventanilla/bancos o por Internet (SUNAT operaciones en línea) para obtener código de envío.</div>
+                  <div class="content-text">Registrar y recuperar número de orden: Tras presentar la declaración se registra el número de orden en el PDT-PLAME; este permite recuperar el archivo de envío. Recuperar verifica que no exista declaración para el periodo; si no existe, guarda la información y permite ingresar al módulo declaraciones.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=4294" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:11:34)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="8">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">8</span>
+              <span class="section-title">Utilitarios del PDT-PLAME: sincronización, T-registro, copias y usuarios</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">8.1</span>
+                  <span class="subsection-title">Importar archivo personalizado del T-registro</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Procedimiento de importación: En Utilitarios se usa la opción para importar el archivo generado en clave SOL; se selecciona ruta y se importa el archivo. El archivo contiene datos del empleador, trabajadores, pensionistas, personal de información y personal de terceros.</div>
+                  <div class="content-text">Efecto de la importación: Al importar un nuevo archivo personalizado del T-registro se reemplazan totalmente los datos del T-registro existentes en el PDT-PLAME. Para generar el archivo personalizado se accede a clave SOL → Mis declaraciones y pagos → Utilitarios → generar archivo actualizado.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=4828" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:20:28)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">8.2</span>
+                  <span class="subsection-title">Generar y restaurar copias de seguridad</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Generación de backup: Permite generar copia integral por número de root con toda la información registrada; se guarda en un archivo para resguardo.</div>
+                  <div class="content-text">Restauración de copia: Al restaurar se elimina cualquier información previa en el PDT para ese root y queda solo lo restaurado; útil para recuperar periodos o trasladar datos entre sesiones.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=5082" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:24:42)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">8.3</span>
+                  <span class="subsection-title">Administración de usuarios y cambio de contraseñas</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Gestión de cuentas sin clave SOL: Módulo administrador de usuarios permite crear, eliminar e iniciar contraseñas de usuarios del PDT sin clave SOL. Al iniciar contraseña el usuario debe cambiarla por seguridad al primer ingreso.</div>
+                  <div class="content-text">Cambio de contraseña: Requiere ingresar la contraseña antigua y confirmar la nueva; recomendable cambio inmediato por seguridad.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=5282" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:28:02)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="9">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">9</span>
+              <span class="section-title">Reportes, estructuras de importación y ayuda del aplicativo</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">9.1</span>
+                  <span class="subsection-title">Reportes disponibles en PDT-PLAME</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Tipos de reportes y contenidos: R1 a R8 y R15 entre otros: incluyen datos de ingresos, tributos y aportes por trabajador, tipos de ingreso, bases de cálculo, tributos a cargo del trabajador y del empleador, jornada laboral, motivos de suspensión y determinación de deuda. Reportes específicos para trabajadores, pensionistas y CAS.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=5475" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:31:15)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">9.2</span>
+                  <span class="subsection-title">Anexo 3: estructura de archivos para importación</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Formato y contenido del anexo 3: Define la estructura (plantilla Excel) requerida para que el PDT Plame importe los datos correctamente. Contiene hojas con estructuras para empleadores, datos personales, trabajadores, pensionistas, personal de terceros, comprobantes y otros elementos necesarios.</div>
+                  <div class="content-text">Uso práctico y entrega: Se compartió enlace para descargar el anexo; ejercicio práctico de la sesión siguiente consistirá en importar ese archivo al PDT.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=6451" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:47:31)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">9.3</span>
+                  <span class="subsection-title">Módulo de ayuda y soporte en pantalla</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Contenido del módulo de ayuda: Explica la funcionalidad del aplicativo y detalla los campos que deben consignarse en el PDT-PLAME. Acceso mediante ícono de signo de interrogación en las pantallas del PDT; útil para resolver dudas al completar declaraciones.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=6189" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:43:09)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="10">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">10</span>
+              <span class="section-title">Detalle de los registros por tipo de personal y ejemplos prácticos</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">10.1</span>
+                  <span class="subsection-title">Datos de trabajadores y cálculo automático</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Campos y efecto en cálculo: DNI, nombres, fecha de inicio, tipo de trabajador, régimen de salud y pensiones, cobertura SCTR, indicador "Más Vida", jornada laboral, horas extras y remuneración permanente. Al modificar remuneración permanente se actualizan automáticamente tributos y aportes (ej. ESSALUD 9% por defecto sobre la base).</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=5741" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:35:41)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">10.2</span>
+                  <span class="subsection-title">Pensionistas, personal de formación, terceros y cuarta categoría</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Pensionistas: Reportes R10 y R11: datos de ingresos, tributos, aportes y bases de cálculo para pensionistas.</div>
+                  <div class="content-text">Personal de formación: Se registra tipo de documento, apellidos, monto de subvención o estipendio.</div>
+                  <div class="content-text">Personal de terceros: Se registra tipo y número de documento, tasa porcentual, base de cálculo, régimen de salud y SCTR aplicable.</div>
+                  <div class="content-text">Personal de cuarta categoría: Datos de identificación, condición de domiciliado y convenios para evitar doble imposición; no se copian comprobantes al importar.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=5970" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:39:30)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="11">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">11</span>
+              <span class="section-title">Consultas laborales prácticas y cierre</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">11.1</span>
+                  <span class="subsection-title">Preguntas sobre desvinculación y liquidaciones</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Liquidación por renuncia y despido: Si un trabajador con contrato indeterminado renuncia, su liquidación no incluye indemnización por despido; la indemnización aplica solo si es despedido. Al cesar, se deben pagar todos los beneficios sociales y hacerlo dentro de las 48 horas posteriores a la terminación del vínculo laboral.</div>
+                  <div class="content-text">Boletas y liquidaciones finales: La liquidación puede registrarse en una planilla/boleta separada según el momento del pago; algunas empresas integran pagos finales en la última planilla, otras generan documentos separados.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=6542" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:49:02)</span> </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">11.2</span>
+                  <span class="subsection-title">Dudas frecuentes y coordinación de próximas sesiones</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Resolución de consultas en clase: Se reiteró la importancia de bajar el anexo 3, enviar modificaciones de Excel y traer copia de seguridad para la sesión práctica siguiente.</div>
+                  <div class="content-text">Organización de recuperación de clase y entrega de tareas: Se reprogramó próxima sesión a la misma hora y se solicitó enviar por correo recordatorios a quienes faltaron; se enfatizó entregar las modificaciones de planillas antes de la siguiente clase.</div>
+                  <a href="https://www.youtube.com/watch?v=CnKoWITfKBY&start=6828" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:53:48)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="footer">
       <a href="https://www.edumin.pe/" target="_blank">
         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20BLANCO%20CANVA-mIKMypQ452RzmXVMUadb6mnvPaejXD.png" alt="EDUMIN Logo" class="footer-logo" />

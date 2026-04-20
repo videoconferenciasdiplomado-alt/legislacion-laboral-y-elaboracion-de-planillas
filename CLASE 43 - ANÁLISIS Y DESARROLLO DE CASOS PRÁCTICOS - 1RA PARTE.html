@@ -756,8 +756,515 @@
 
     <div class="header-spacer"></div>
 
-    <div class="container"></div>
+    <div class="container">
+      <div class="mind-map animacion-contenido" id="mindMap">
+        <div class="section" data-section="1">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">1</span>
+              <span class="section-title">Acceso y obtención de archivo personalizado T-Registro</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">1.1</span>
+                  <span class="subsection-title">Registro y descarga desde SOL</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Proceso para solicitar archivo personalizado del T-Registro mediante Sunat Operaciones en Línea (SOL): Acceder con clave SOL a "Mis Declaraciones y Pagos" → "Utilitarios para Mis Declaraciones y Pagos". Generar y registrar pedido del archivo personalizado del T-Registro. Validar empleador después de ingresar con clave SOL para que aparezcan nombre y RUC en pantalla.</div>
+                  <div class="content-text">Descarga y verificación del archivo una vez atendido el pedido: Descargar el archivo generado y verificar que el T-Registro esté actualizado antes de importar al PDT PLAME. Usar copia de seguridad del PDT PLAME para restablecer declaraciones y datos en caso de problemas locales.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=0" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:00:00)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">1.2</span>
+                  <span class="subsection-title">Contenido y rol del archivo personalizado</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">El archivo contiene datos del empleador y de los prestadores inscritos en el T-Registro: Incluye trabajadores, pensionistas, personal en formación y personal de terceros.</div>
+                  <div class="content-text">Importancia de realizar modificaciones en el T-Registro antes de actualizar PDT PLAME: Primero modificar en T-Registro y luego sincronizar o importar en PDT PLAME para reflejar cambios. Sincronización mostrará los prestadores activos al cierre del periodo (ej.: trabajadores al 31 de mayo).</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=49" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:00:49)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="section" data-section="2">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">2</span>
+              <span class="section-title">Configuración y mantenimiento en PDT PLAME</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">2.1</span>
+                  <span class="subsection-title">Secciones principales de la declaración</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Tres secciones para ingreso de datos en PDT PLAME: Identificación del empleador. Mantenimiento de conceptos. Convenios.</div>
+                  <div class="content-text">Ejemplos de datos en identificación del empleador: RUC y tipo de empleador (sector privado o público). Indicador de convenio de estabilidad para habilitar sección "convenio".</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=120" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:02:00)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">2.2</span>
+                  <span class="subsection-title">Mantenimiento de conceptos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Selección de conceptos de ingresos y descuentos para planilla y tributos: Rubros como ingresos, bonificaciones, gratificaciones, indemnizaciones y descuentos. Opciones para horas extras (25% y 35%), remuneración vacacional, vacaciones truncas, compensación vacacional y remuneración en especie.</div>
+                  <div class="content-text">Uso de "Otros conceptos" para pagos no previstos en tabla 22: Permite escribir descripción libre y grabar el nuevo concepto.</div>
+                  <div class="content-text">Conceptos exclusivos para sector público: Rubro 2000 habilitado solo para empleadores del sector público u otras entidades.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=213" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:03:33)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">2.3</span>
+                  <span class="subsection-title">Convenios de estabilidad</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Cuando empleador señala convenio de estabilidad, debe ingresar la tasa establecida: Tasa utilizada en la elaboración de la declaración del PDT. Procedimiento: ingresar tasa, pulsar modificar y grabar para que se aplique en cálculos.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=1281" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:21:21)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="3">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">3</span>
+              <span class="section-title">Obtención y sincronización de datos del T-Registro</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">3.1</span>
+                  <span class="subsection-title">Datos requeridos por tipo de sujeto</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Trabajadores: tipo y número de documento, apellidos y nombres, fecha de nacimiento, tipo de trabajador, régimen pensionario, régimen de salud, indicadores de aportes y situación laboral: Indica aporte a Essalud, aportes a pensión, domicilio según impuesto a la renta y si percibe rentas de quinta categoría.</div>
+                  <div class="content-text">Pensionistas: documento, nombres, fecha de nacimiento, tipo de pensionista, régimen pensionario de origen y situación del pensionista: Personal de formación y practicantes: documento, nombres, fecha de nacimiento y monto pagado de la subvención o estipendio.</div>
+                  <div class="content-text">Personal de terceros y prestadores de cuarta categoría: documento, nombres, fecha de nacimiento, indicador de aporte a Essalud, condición domiciliada y indicador de convenio para evitar doble imposición.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=1332" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:22:12)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">3.2</span>
+                  <span class="subsection-title">Mecanismos para incorporar datos al PDT PLAME</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Sincronización en línea con T-Registro (requiere clave SOL): Proceso en módulo "Declaraciones Juradas" → "Información General" → opción "Sincronizar" → Ejecutar. Actualiza novedades: nuevos registros, modificaciones y bajas entre fechas del periodo de la declaración.</div>
+                  <div class="content-text">Importación de archivo personalizado del T-Registro: Recomendado para empleadores con gran volumen de información como primera carga. Posteriormente, actualizaciones mediante sincronización o nueva importación. Importar archivos planos siguiendo la estructura del anexo 3 para cargas masivas.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=1433" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:23:53)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">3.3</span>
+                  <span class="subsection-title">Requisitos y pasos para sincronizar/usar datos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Sincronización es proceso en línea que descarga y carga datos al PDT PLAME: Debe validarse la clave SOL y que el usuario tenga opción "Declaraciones y Pagos" habilitada. Al ejecutar, el PDT muestra fecha inicio y fin del periodo que define universo de prestadores; si no corresponde, usar "Mantenimiento de periodos".</div>
+                  <div class="content-text">Uso de utilitarios en PDT PLAME: Importación de archivo, mantenimiento de periodos y generación de copia de seguridad para restaurar declaraciones anteriores.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=1607" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:26:47)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="4">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">4</span>
+              <span class="section-title">Elaboración de la declaración y detalle de la planilla</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">4.1</span>
+                  <span class="subsection-title">Crear nueva declaración</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Ruta: "Declaraciones Juradas" → "Nueva Declaración": Completar las 3 secciones: Información General, Detalle de la Declaración y Determinación de la Deuda. En Información General indicar periodo tributario, si es sustitutoria o rectificatoria y forma de obtención de registros (sincronizar o importar).</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=2215" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:36:55)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">4.2</span>
+                  <span class="subsection-title">Obtener registros para la declaración</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Opciones para obtener nómina y registros: Sincronizar datos del T-Registro para datos actualizados al periodo. Utilizar datos del T-Registro según fecha de última actualización en PDT (de sincronización anterior o archivo importado).</div>
+                  <div class="content-text">Confirmar fechas del periodo al pulsar "Ejecutar" antes de continuar: Se muestran los trabajadores activos en la fecha de corte (ej.: al 31 de mayo).</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=2316" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:38:36)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="5">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">5</span>
+              <span class="section-title">Detalle, formas de carga y elementos por trabajador</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">5.1</span>
+                  <span class="subsection-title">Detalle de la declaración y formas de carga</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Sección "Detalle de la declaración" para registrar datos mensuales de cada sujeto: Registrar trabajadores, pensionistas, personal en formación, terceros y prestadores de cuarta categoría.</div>
+                  <div class="content-text">Dos maneras de completar datos: Carga individual: editar detalle uno a uno mediante icono "editar" y usar botón "grabar" para validar consistencia. Carga masiva: importar archivo de detalle conforme anexo 3 (estructura de archivos de importación RM 121-2011-TR).</div>
+                  <div class="content-text">Botón "importar archivo" redirecciona al explorador para seleccionar archivo con formato del anexo 3.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=2468" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:41:08)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">5.2</span>
+                  <span class="subsection-title">Elementos a declarar por trabajador</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Datos básicos y indicadores obtenidos del T-Registro: Indicador de aporte a Essalud, aportes a pensión, indicador de percibir rentas de quinta categoría, domiciliación, tasas de salud y de convenio si aplica.</div>
+                  <div class="content-text">Jornada laboral y días: Días trabajados, días subsidiados (con tipo de subsidio y número de días), días no laborados y no subsidiados, horas ordinarias y horas extra.</div>
+                  <div class="content-text">Ingresos y descuentos: Códigos y montos de ingresos remuneraciones devengadas y pagadas. Códigos y montos de descuentos como adelantos, cuotas sindicales y otros descuentos no deducibles. Base de cálculo y montos de tributos y aportes asociados.</div>
+                  <div class="content-text">Consistencia y actualización automática: Al grabar, aplicativo indica si datos son consistentes; tributos y aportes se actualizan en el registro.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=2575" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:42:55)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="6">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">6</span>
+              <span class="section-title">Carga y manejo de sujetos especiales en la declaración</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">6.1</span>
+                  <span class="subsection-title">Pensionistas y su registro</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Datos y valores a consignar para pensionistas: Datos básicos, indicador de aporte a Essalud, código y monto de pensiones devengadas y pagadas, códigos y montos de descuentos, base de cálculo de tributos y aportes.</div>
+                  <div class="content-text">Carga individual y masiva: Editar detalle individual y grabar para validar consistencia. Preparar archivo plano según anexo 3 para importación masiva (estructura 27 y 19 según tipo de archivo).</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=4612" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:16:52)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">6.2</span>
+                  <span class="subsection-title">Personal en formación y practicantes</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Datos requeridos y monto de la subvención o estipendio: Datos básicos obtenidos del T-Registro y monto pagado de la subvención o estipendio.</div>
+                  <div class="content-text">Carga y validación: Registrar individualmente y grabar para validar; también importar archivo plano según anexo 3 para carga masiva.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=4740" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:19:00)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">6.3</span>
+                  <span class="subsection-title">Personal de terceros y prestadores de cuarta categoría</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Definición y datos a informar mensualmente: Incluye intermediación laboral, tercerización, contratistas y subcontratistas. Tipo y número de documento, apellidos y nombres, indicador de domicilio según ley del IR, indicador de convenio para evitar doble imposición.</div>
+                  <div class="content-text">Procedimiento de registro: Validar RUC para prestadores con RUC, elegir condición domiciliado/no domiciliado, indicar existencia de convenio y grabar. Importación masiva mediante archivos planos conforme anexo 3.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=4818" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:20:18)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="7">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">7</span>
+              <span class="section-title">Determinación de la deuda y utilitarios finales</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">7.1</span>
+                  <span class="subsection-title">Verificación de consistencia y cálculo de deuda</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Condiciones para determinar la deuda: Completar detalle de declaración y verificar que todos los sujetos tengan estado consistente. Ingresar a determinación de la deuda, completar campos, validar y guardar la declaración.</div>
+                  <div class="content-text">Qué incluye la determinación: Muestra base imponible, impuestos, tributos y aportes resultantes del llenado del detalle.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=5304" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:28:24)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">7.2</span>
+                  <span class="subsection-title">Declaraciones registradas y utilitarios</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Declaraciones registradas y copiar información entre periodos: En "Declaraciones registradas" aparecen periodos previos; se puede copiar origen (ej.: abril) a destino (ej.: mayo) salvo algunos cálculos que no se copian (por ejemplo AFP).</div>
+                  <div class="content-text">Otros utilitarios: Generación de copia de seguridad, mantenimiento de periodos, importación de archivos y tablas específicas como tabla 32 para EPS y casillas 602-608 para registro de facturas pagadas.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=5350" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:29:10)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="8">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">8</span>
+              <span class="section-title">Práctica, tareas y consideraciones finales</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">8.1</span>
+                  <span class="subsection-title">Ejecución práctica en empresa real con clave SOL</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Uso didáctico de una empresa real para practicar en PDT PLAME: Mostrar en vivo trabajadores cargados, editar datos laborales, fechas de inicio y fin, régimen de salud y aporte CTR. Demostración de ingreso de datos de cuarta categoría validando RUC y condición domiciliada.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=4929" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:22:09)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">8.2</span>
+                  <span class="subsection-title">Trabajo calificado y parámetros a considerar</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Instrucciones del trabajo práctico y elementos a incluir: Tres trabajos calificados: ejemplos (Pedro Perito, Juana, otros) que deben enviarse por correo para retroalimentación. Datos a considerar: comisiones, préstamos con cuota mensual, adelantos de sueldo, faltas, remuneración mínima vital (actualizar a S/ 1,025), UIT y tasas de salud (9%).</div>
+                  <div class="content-text">Plazo y entrega: 20 minutos estimados en clase para avance; remitir archivos por correo para recibir acuse y retroalimentación.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=5652" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:34:12)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">8.3</span>
+                  <span class="subsection-title">Observaciones pedagógicas y cierre</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Revisión de dudas frecuentes: Uso de Excel con fórmulas para preparar archivos de importación, verificar que coincida con estructura del anexo 3. Recordatorio de traer formulario Nexo 3 en próxima sesión para prácticas guiadas.</div>
+                  <div class="content-text">Clausura de la sesión: Profesor seguirá facilitando claves SOL de distintas empresas para prácticas adicionales y enviará diapositivas y materiales a los estudiantes.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=5611" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:33:31)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="9">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">9</span>
+              <span class="section-title">Coordinación final y cierre de la sesión</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">9.1</span>
+                  <span class="subsection-title">Entrega y proyección de trabajos en la siguiente clase</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Acuerdos sobre envío y revisión de trabajos antes de la próxima clase: Estudiantes deben enviar trabajos por correo antes del día siguiente para que el profesor los acuse de recibo. Los trabajos recibidos serán proyectados al inicio de la clase del jueves y se continuará con el mismo PDT PLAME.</div>
+                  <div class="content-text">Plazos y confirmaciones: Profesor exige recibir los trabajos antes del jueves para su revisión; los estudiantes confirman el compromiso de envío. Mensajes de agradecimiento y cierre entre participantes al finalizar la sesión.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=7236" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(02:00:36)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">9.2</span>
+                  <span class="subsection-title">Recuperación de clase y disponibilidad</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Fechas y asistencia para recuperación: Sesión de recuperación programada el viernes a la misma hora para quienes lo requieran.</div>
+                  <div class="content-text">Soporte y materiales adicionales: Profesor y asistentes colaboran con proyecciones y apoyo en vivo durante la próxima sesión para continuar las prácticas del PLAME.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=7292" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(02:01:32)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="10">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">10</span>
+              <span class="section-title">Conversación de cierre y agradecimientos</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">10.1</span>
+                  <span class="subsection-title">Interacción final del grupo</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Saludos y despedidas al cierre de la sesión: Varios participantes y el docente se despiden con saludos y agradecimientos.</div>
+                  <div class="content-text">Indicaciones finales implícitas: Confirmación tácita de seguimiento de temas pendientes en la próxima clase y disposición del profesor para resolver dudas durante la recuperación.</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=7337" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(02:02:17)</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">10.2</span>
+                  <span class="subsection-title">Registro de cierres y agradecimientos reiterados</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Repetición de expresiones de agradecimiento y despedida</div>
+                  <div class="content-text">Refleja cierre informal y cordial de la sesión entre asistentes y docente</div>
+                  <a href="https://www.youtube.com/watch?v=emUu_eCN0p8&start=7339" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(02:02:19)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="footer">
       <a href="https://www.edumin.pe/" target="_blank">
         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20BLANCO%20CANVA-mIKMypQ452RzmXVMUadb6mnvPaejXD.png" alt="EDUMIN Logo" class="footer-logo" />

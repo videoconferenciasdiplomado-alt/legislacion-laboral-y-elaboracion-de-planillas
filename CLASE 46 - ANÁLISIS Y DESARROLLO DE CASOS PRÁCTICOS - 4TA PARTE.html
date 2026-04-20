@@ -756,8 +756,340 @@
 
     <div class="header-spacer"></div>
 
-    <div class="container"></div>
+    <div class="container">
+      <div class="mind-map animacion-contenido" id="mindMap">
+        <div class="section" data-section="1">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">1</span>
+              <span class="section-title">Introducción y administración de usuarios en AFP-NET</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">1.1</span>
+                  <span class="subsection-title">Activación y creación de usuarios</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Usuario administrador inicial (admin001/ADM001) se activa con los datos de la persona indicada al registrar la empresa y llega por correo electrónico la primera clave: Tras recibir usuario y contraseña se debe cambiar la clave inicial por seguridad y activar permisos para declarar planillas. Otros usuarios se crean con prefijo EMP y pueden recibir una o más opciones según sus tareas; solo usuarios con la opción "administración usuarios" pueden crear o modificar accesos.</div>
+                  <div class="content-text">Pasos para crear y habilitar un nuevo usuario en AFP-NET: Ir a Administración → Usuarios, completar datos (nombres, apellidos, documento, área, puesto, correo, teléfono) y marcar "ver detalle de planillas" si corresponde. Guardar para generar la cuenta (ej. EMPNN), asignar claves y, si corresponde, marcar opciones como aportaciones, afiliados, consulta unitaria/masiva y liquidaciones previas.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=77" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:01:17)</span></a>
+                </div>
+              </div>
+            </div>
 
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">1.2</span>
+                  <span class="subsection-title">Modificación y asignación de accesos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Modificar datos de usuario mediante Administración → Usuarios: buscar, seleccionar, editar campos y guardar: Marcar o desmarcar "ver detalle de planillas" según permisos.</div>
+                  <div class="content-text">Asignación de accesos y pasos prácticos para habilitar opciones necesarias: Seleccionar usuario → Asignar Acceso → habilitar opciones (aportes, afiliados, consultas unitarias/masivas, liquidaciones previas, obligaciones de pago, deudas ciertas y presuntas) y guardar. Cerrar sesión e ingresar de nuevo con el usuario para verificar que en la parte superior izquierda aparezcan las opciones habilitadas (aportes, afiliados, liquidaciones previas, obligaciones de pago).</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=239" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:03:59)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="2">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">2</span>
+              <span class="section-title">Consultas de afiliados y datos que provee AFP-NET</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">2.1</span>
+                  <span class="subsection-title">Concepto y utilidades de la consulta de afiliados</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">AFP-NET permite conocer la AFP y estado del trabajador ingresando DNI, CUS o nombres: Evita la necesidad de conocer CUSID en labores rutinarias de contratación.</div>
+                  <div class="content-text">Información que devuelve la consulta: Débengue máximo, motivo de pensión, último débengue, motivo de salida (desincorporación o fallecimiento), AFP y porcentaje de comisión.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=635" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:10:35)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">2.2</span>
+                  <span class="subsection-title">Consulta unitaria y masiva de afiliados</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Consulta unitaria: Afiliados → Consulta de afiliados unitaria, buscar por tipo/número de documento o por apellidos y nombres; devuelve CUS y datos asociados si registrados.</div>
+                  <div class="content-text">Consulta masiva: subir un Excel con documentos y nombres para obtener CUS y datos por afiliado: Resultado incluye débengue máximo permitido, motivo de pensión, último débengue, motivo de salida y porcentaje de comisión para el débengue seleccionado.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=827" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:13:47)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="3">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">3</span>
+              <span class="section-title">Preparación e importación de planillas en AFP-NET</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">3.1</span>
+                  <span class="subsection-title">Formato de archivo y campos obligatorios</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Requisitos generales del fichero (Excel o texto): Columna A: tipo de documento (valores numéricos obligatorios), Columna B: número de documento (configurar como texto), Columnas C-E: apellidos paterno, materno y nombres. Otros campos: relación laboral (S/N), fecha inicio/fin, tipo de trabajo, remuneración asegurable, aportes voluntarios y códigos para excepciones.</div>
+                  <div class="content-text">Campos y codificaciones específicas: Tipo documento: 0 DNI, 1 CE, 2 carnet militar/policial, 3 libreta adolescente, etc. Excepciones para no aportar: L (licencia sin goce), U (subsidio E-Salud), J (jubilación), I (invalidez), P (inicio después del cierre), NO (otros motivos). Para regímenes especiales (construcción, minería, pesquería) se crean planillas por tipo de trabajo y pueden requerir archivos adicionales de semanas contributivas.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=1411" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:23:31)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">3.2</span>
+                  <span class="subsection-title">Reglas de formato numérico y estructura del archivo</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Montos numéricos sin separadores decimales y completados con ceros según longitudes especificadas: Ejemplo: 600.20 debe representarse ajustado al formato requerido.</div>
+                  <div class="content-text">Línea de detalle única por trabajador salvo cuando realice varios tipos de trabajo en el mismo mes: Importante: eliminar filas de encabezado extras (p. ej. filas 1 a 3 del formato FPN) antes de subir el archivo para evitar errores.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=2021" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:33:41)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="4">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">4</span>
+              <span class="section-title">Carga, validación y pago de planillas</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">4.1</span>
+                  <span class="subsection-title">Proceso de carga y validación en AFP-NET</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Ruta: Aportes → Presentación y pago de planillas; seleccionar periodo de débengue y archivo a importar (Planilla única de AFP/FPNet): Si hay trabajadores pesqueros, marcar "subir semanas contributivas" y adjuntar archivo adicional con semanas trabajadas.</div>
+                  <div class="content-text">Validaciones y manejo de errores en la importación: Errores restrictivos deben corregirse antes de continuar; errores de advertencia no impiden el pase pero deben revisarse mediante el reporte generado (cabecera, detalle, PDF y Excel). Verificar formatos (ej. números de documento tomados como cantidades) y usar Internet Explorer si el portal presenta incompatibilidades con otros navegadores.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=2262" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:37:42)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">4.2</span>
+                  <span class="subsection-title">Opciones de pago y seguridad</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Formas de pago: pago en línea (cargo a cuenta bancaria) o emisión de ticket para pago en bancos recaudadores: Para pago en línea es necesario afiliar previamente la cuenta bancaria en la entidad recaudadora mediante formatos y contratos (BCP, BANBIF, Interbank, Scotia, BBVA, etc.). Voucher o constancia de pago incluye número de operación, importe y banco; se puede descargar en PDF.</div>
+                  <div class="content-text">Doble firma para mayor seguridad en pagos: Solicitar activación en Datos de la empresa (modo de activación: aportes presentación y pago de planillas); la doble firma se activa al tercer día de la solicitud. Para pagos con doble firma ambos usuarios deben ingresar a Aportes → Pagos pendientes de segunda firma y confirmar o rechazar el pago.</div>
+                  <div class="content-text">Estados de planillas y gestión de deudas: AFP-NET muestra planillas en estados: presentada, anulada o pagada; desde la interfaz se puede imprimir, pagar en línea, anular o emitir ticket. Semáforo por débengue: rojo (obligación presunta), amarillo (obligaciones ciertas con deuda), verde (sin deudas); generar regularizaciones o descargos según corresponda.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=3382" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:56:22)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="5">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">5</span>
+              <span class="section-title">Uso práctico de AFP-NET y FPNET: proceso paso a paso</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">5.1</span>
+                  <span class="subsection-title">Acceso, solicitud de clave y planilla única</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Solicitud de acceso: descargar la solicitud gratuita de la FPNET, completar datos de la empresa y firma del representante, entregar en cualquier AFP con DNI del representante: La AFP envía por correo el usuario (ADM001/adm001) y la clave inicial; al ingresar hay que cambiar la clave por una personal.</div>
+                  <div class="content-text">Planilla única: la AFP adjunta un formato Excel (planilla única) que detalla columnas y filas a llenar; conservar el formato y eliminar filas de encabezado sobrantes antes de subir: Llenar desde la fila indicada, verificar campos como tipo documento (0), número, relación laboral (S), inicio, tipo de trabajo, remuneración asegurable, aporte voluntario y saldo mínimo.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=4087" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:08:07)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">5.2</span>
+                  <span class="subsection-title">Ejemplo práctico de llenado y subida</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Pasos demostrados en clase: abrir planilla enviada por FPNET, completar datos del trabajador (push/COD, tipo doc 0 para DNI, número, apellidos, nombres, relación laboral S, remuneración asegurable, tipo de trabajo): Guardar el archivo en el escritorio con tipo Excel y subirlo en Transacciones → Planillas → Presentación y pago → seleccionar periodo y cargar la planilla única. Si la carga no presenta errores, presentar la planilla; luego acceder a Consultas y pago para ver la planilla presentada.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=4345" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:12:25)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">5.3</span>
+                  <span class="subsection-title">Tickets, comprobantes y recomendaciones prácticas</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Generación de ticket para pago en banco: el ticket muestra día (o fecha) y código para pago en ventanilla; no siempre es necesario imprimir si el banco acepta identificación por número: Manual indica ventanas 24 horas; en la práctica se puede pagar hasta el último día y luego verificar que la planilla aparece como pagada en AFP-NET.</div>
+                  <div class="content-text">Navegador recomendado y comprobaciones: usar Internet Explorer si hay problemas de acceso con Chrome; revisar que celdas en Excel no se transformen (p. ej. número de DNI tomado como cantidad): Guardar copias y capturas de pantalla para evidencias y prácticas.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=4681" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:18:01)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="6">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">6</span>
+              <span class="section-title">Gestión, consultas y tareas prácticas para estudiantes</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">6.1</span>
+                  <span class="subsection-title">Consultas, reportes e impresiones</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Aportes → Consulta y pago de planillas o regularizaciones: usar filtros (AFP, periodo, estado, fecha de declaración, fecha de pago, número de planilla o ticket) y Buscar: AFP-NET permite descargar resultados en archivo de texto, generar reportes imprimibles y guardar PDF de cada planilla o regularización.</div>
+                  <div class="content-text">Opciones disponibles por planilla: imprimir, anular, pagar en línea, emitir ticket; el sistema muestra iconos para cada acción.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=5103" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:25:03)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">6.2</span>
+                  <span class="subsection-title">Trabajo práctico y preparación de examen</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Ejercicio asignado: elaborar capturas del PDT Plame con usuario adminis, llenar formato Excel de la planilla (6 trabajadores en la empresa de práctica) y preparar la pestaña AFP/FPNet: Instrucciones: realizar capturas de pantalla de los pasos en PDT Plame (síncronizar RU, validar deuda, guardar) y en AFP-NET (carga de planilla, presentación, generación de ticket y pago en línea). Entrega y presentación: preparar 20 minutos de exposición, editar capturas en Paint/PowerPoint con flechas y anotaciones, anexar Excel sin datos reales y subirlo según indicaciones del docente.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=5492" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:31:32)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="7">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">7</span>
+              <span class="section-title">Procedimientos de recuperación de acceso y soporte</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">7.1</span>
+                  <span class="subsection-title">Recuperación de clave y acceso SOL</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">En caso de olvido de clave: solicitar reenvío de clave ingresando RU/usuario, tipo y número de documento, CAPTCHA y correo; la nueva clave llega por correo.</div>
+                  <div class="content-text">Uso de clave SOL y restricciones: Algunas acciones requieren clave SOL para sincronizar o jalar datos desde PDT Plame; si no se dispone se deben usar credenciales SOL o coordinar con compañeros que la tengan. El docente proporciona RU y claves de práctica (adminis) para las capturas y ejercicios en clase.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=5503" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:31:43)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">7.2</span>
+                  <span class="subsection-title">Soporte, recursos y materiales compartidos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Documentos y formatos: la solicitud firmada para generar usuario/clave, el Excel de PDT Plame y la planilla única de FPNET se comparten por correo y en el grupo de WhatsApp del instituto: Plantillas de afiliación y formatos bancarios (BCP, BANBIF, Interbank, Scotia, BBVA) disponibles en la descripción del video o compartidos por el docente.</div>
+                  <div class="content-text">Recomendaciones finales para la práctica y examen: Dominar el manejo del Excel y el formato FPNET, tomar capturas y preparar un fichero con seis trabajadores en PIN (no modificar datos reales), y practicar la presentación y el pago en línea o emisión de ticket. Fechas y cronograma: repaso y prácticas en las siguientes sesiones, con examen práctico programado; los estudiantes deben entregar el trabajo el día indicado y estar preparados para el examen práctico final.</div>
+                  <a href="https://www.youtube.com/watch?v=Q_d10cC6rsY&start=6287" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:44:47)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="footer">
       <a href="https://www.edumin.pe/" target="_blank">
         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20BLANCO%20CANVA-mIKMypQ452RzmXVMUadb6mnvPaejXD.png" alt="EDUMIN Logo" class="footer-logo" />

@@ -756,8 +756,370 @@
 
     <div class="header-spacer"></div>
 
-    <div class="container"></div>
-
+    <div class="container">
+      <div class="mind-map animacion-contenido" id="mindMap">
+        <div class="section" data-section="1">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">1</span>
+              <span class="section-title">Uso del PDT PLAME y proceso de declaración</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">1.1</span>
+                  <span class="subsection-title">Presentación del ejercicio y datos iniciales</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Descripción general del ejemplo con cuatro trabajadores: Remuneraciones: trabajador 1 = 3,000; trabajador 2 = 2,300 (trabajó 25 días, faltó 5); trabajador 3 = 2,000; trabajador 4 = 1,500. Descuentos: retención de quinta categoría para trabajador 1; descuento por 5 faltas para trabajador 2 (383); descuento judicial 10% para trabajador 3 (200).</div>
+                  <div class="content-text">Sistemas de previsión y salud indicados por el docente: Tres primeros en AFP (prima, inter, ProFuturo mencionadas); último trabajador en ONP. Aportes de salud y neto a pagar calculados en planilla.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=0" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:00:00)</span> </a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">1.2</span>
+                  <span class="subsection-title">Ingreso al sistema y creación de declaración</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Ruta de acceso: PDT PLAME → planilla electrónica PLAME → nueva declaración → formulario general: Datos del empleador: RUC, razón social (Químicos Richard Sack), periodo mayo 2024, sincronización con T-Registro y SOL.</div>
+                  <div class="content-text">Registro y estado de declaraciones: Se suben trabajadores, aparecen en histórico y cambian a estado "check" cuando se graba correctamente.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=561" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:09:21)</span> </a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">1.3</span>
+                  <span class="subsection-title">Registro de trabajador y cálculo de importes</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Datos laborales por trabajador ingresados en PLAME: Identificación, fecha inicio, tipo de trabajador, régimen de salud y pensión. Jornada: días laborados (ej. 31 días), horas ordinarias (ej. 192).</div>
+                  <div class="content-text">Cálculo automático de ingresos, descuentos y aportes: Remuneración básica (ej. 2,500), comisión AFP (ej. 40), aportaciones obligatorias (10% = 250), prima de seguro AFP y total aportes trabajador (ej. 332.50). Aportes del empleador (E-Salud regular 225) y neto a pagar (ej. 2,167.50).</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=669" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:11:09)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" data-section="2">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">2</span>
+              <span class="section-title">Determinación de la deuda y envío de archivos</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">2.1</span>
+                  <span class="subsection-title">Cálculo de tributos y saldos a pagar</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Componentes de la deuda según PLAME: ONP, E-Salud y retenciones de quinta categoría aparecen en determinación de deuda. Ejemplo de totales: ONP 793, E-Salud 1,504, retención quinta 540, total 2,081 (valores del ejemplo).</div>
+                  <div class="content-text">Opciones de pago y validación: Se puede marcar importe a pagar, método (efectivo, tarjeta, NPC), validar y guardar. Mensajes de alerta si el importe es menor al saldo en ONP o E-Salud; aceptar y guardar declaración.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=823" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:13:43)</span> </a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">2.2</span>
+                  <span class="subsection-title">Generación y envío de archivos a SUNAT y AFP</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Exportación de archivo desde PDT para operaciones en línea SUNAT: Guardar archivo de respaldo, acceder a operaciones en línea SOL, presentación de PDT y receptor de archivos, examinar y enviar. Pantalla de resumen con RUC, periodo, montos por componente y opción "agregar a bandeja" para pago.</div>
+                  <div class="content-text">Subida a AFPnet y planilla única (AFP): Acceso a AFPnet con RUC y contraseña; menú Aportes → Presentación → Pagos y Planillas. Cargar plantilla planilla única (archivo AFPnet Químicos Richard Mayo), descargar confirmación y visualizar trabajadores y retenciones en el sistema.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=1012" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:16:52)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" data-section="3">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">3</span>
+              <span class="section-title">Actividad en clase, evaluación y ONP</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">3.1</span>
+                  <span class="subsection-title">Exposiciones de estudiantes y retroalimentación</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Presentaciones de Excel y PLAME por estudiantes (Zenaida, Bania, Alejandro, Tania): Observaciones del docente: seguir pautas del examen (incluirse como trabajador cuando corresponde), enviar trabajo por correo, corregir y reenviar. Examen teórico-práctico: máximo 4 preguntas teóricas, resto práctico; podrán pedir PLAME y/o Excel.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=195" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:03:15)</span> </a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">3.2</span>
+                  <span class="subsection-title">Conceptos y discusión sobre la ONP</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Definición y características del Sistema Nacional de Pensiones (ONP): Organismo público técnico que reconoce, califica, liquida y paga derechos pensionarios en estricto cumplimiento del marco legal. Sistema de reparto con aporte obligatorio del 13% para afiliados al sistema nacional.</div>
+                  <div class="content-text">Requisitos y prestaciones: Mínimo de 20 años (240 meses) de aportes para acceder a pensión; pensión mínima 500 y máxima 893 soles según ejemplo. Prestaciones: pensión de jubilación e invalidez, pensiones para sobrevivientes (viudez, orfandad, ascendencia) y capital de defunción; prestaciones son irrenunciables e imprescriptibles.</div>
+                  <div class="content-text">Diferencias con AFP y sostenibilidad: ONP: fondo común; AFP: cuenta individual con posibilidad de mayor rentabilidad y retiros parciales. Problemas de cobertura y sostenibilidad en ONP por alto porcentaje que no alcanza 20 años; financiación por aportes, transferencias del MEF y Fondo Consolidado de Reservas Pensionales.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=1769" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(00:29:29)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" data-section="4">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">4</span>
+              <span class="section-title">Debate en clase sobre conveniencia AFP vs ONP y retiros</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">4.1</span>
+                  <span class="subsection-title">Opiniones de estudiantes sobre elección según ingresos y edad</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Consideraciones para elegir sistema de pensiones: Elección depende del nivel de ingresos y etapa de vida: ingresos altos y gente joven suelen preferir AFP; ingresos bajos podrían convenir ONP por pensión fija. Riesgo y rentabilidad en AFP: posibilidad de diversificar fondos y asumir riesgo a cambio de mayor rentabilidad.</div>
+                  <div class="content-text">Riesgos políticos y de futuro: Factores políticos pueden influir en la conveniencia futura de cada sistema, afectando rentabilidad y beneficios.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=3628" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:00:28)</span> </a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">4.2</span>
+                  <span class="subsection-title">Retiros de aportes y efectos en la jubilación</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Opciones de retiro y montos: Posibilidad de retiros parciales o hasta el 95.5% (mencionado también 94.5% en discusión) del total de aportes en casos específicos como jubilación o medidas extraordinarias. Retiro anticipado reduce el monto disponible para pensión y deja un porcentaje mínimo (ej. 4.5%) para pago de salud.</div>
+                  <div class="content-text">Impacto en la pensión futura: Retirar gran parte del fondo puede resolver necesidades inmediatas (vivienda), pero disminuye la base para la pensión futura y aumenta incertidumbre sobre ingresos en vejez.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=3882" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:04:42)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" data-section="5">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">5</span>
+              <span class="section-title">Declaración y pago de aportes a la ONP vía PLAME y SUNAT</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">5.1</span>
+                  <span class="subsection-title">Procedimiento y plazos para declarar y pagar ONP</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Obligación y plazo de declaración: Empleador debe declarar y pagar aportes mensualmente mediante PDT PLAME desde el primer día hábil del mes siguiente al devengo hasta el vencimiento según último dígito del RUC y cronograma SUNAT.</div>
+                  <div class="content-text">Formularios y base imponible: Para ONP se utiliza el formulario 601 (salvo empleadores de trabajadoras del hogar y construcción civil con régimen especial). Base imponible: importe de la remuneración devengada en el mes.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=4094" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:08:14)</span> </a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">5.2</span>
+                  <span class="subsection-title">Pago en la plataforma SUNAT y generación de NPS</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Pasos para realizar el pago en operaciones en línea SUNAT: Ingresar a Operaciones en línea → nueva plataforma → RUC, usuario y contraseña → Boletas de pago → Pago de tributos. Código de tributo ONP: 5310; ingresar periodo y monto, elegir medio de pago (cuenta de detracciones, bancos, etc.) y presentar y pagar.</div>
+                  <div class="content-text">Comprobante y constancia: Descargar constancia de pago que acredita el importe pagado por el tributo ONP.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=5343" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:29:03)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" data-section="6">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">6</span>
+              <span class="section-title">Conceptos prácticos y elementos asegurable en la ONP</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">6.1</span>
+                  <span class="subsection-title">Remuneración asegurable y conceptos afectos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Definición de remuneración asegurable: Se considera remunereción asegurable el total de las cantidades percibidas por el asegurado por servicios prestados al empleador, cualquiera sea la denominación.</div>
+                  <div class="content-text">Conceptos que integran la base para aportes ONP: Sueldo en dinero y en especie, comisiones o destajo, comisiones eventuales, horas extras (25% hasta dos horas, 35% para horas excedentes), trabajo en feriado o descanso, premios por ventas. Prestaciones alimentarias, suministros directos, vacaciones truncas, remuneración vacacional, bonificaciones regulares y por tiempo de servicio, gratificaciones (Fiestas Patrias, Navidad) y otras asignaciones regularmente otorgadas.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=4501" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:15:01)</span> </a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">6.2</span>
+                  <span class="subsection-title">Valoración de conceptos específicos y normas aplicables</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Alimentación en especie: Valorización por acuerdo entre partes o, en su defecto, lo que establezca el Instituto Nacional de Alimentación y Nutrición u organismo sustituto.</div>
+                  <div class="content-text">Horas extras y recargos: Pago de las dos primeras horas extras con recargo del 25% y horas adicionales con recargo del 35% según el artículo 10 del Decreto Legislativo 007-2002.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=4711" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:18:31)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" data-section="7">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">7</span>
+              <span class="section-title">Registro de trabajadores en sistemas (T-Registro, AFPnet, SUNAT) y demostración práctica</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">7.1</span>
+                  <span class="subsection-title">Registro individual en plataformas y campos obligatorios</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Bloques del registro: derecho, empleador y trabajador: Datos esenciales: número de documento, fecha de nacimiento, teléfono, correo y dirección; posible dirección alternativa para atención en salud si trabaja fuera de su provincia de residencia.</div>
+                  <div class="content-text">Datos laborales y de contrato: Fecha de ingreso, tipo de trabajador, régimen laboral, código de puesto (selección en lista), tipo de contrato, periodicidad de pago y monto; opción de depósito en cuenta o efectivo.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=5734" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:35:34)</span> </a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">7.2</span>
+                  <span class="subsection-title">Sincronización, alertas y comprobantes</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Avisos y verificación al registrar trabajador: Alertas si trabajador figura con otro empleador o afiliado a AFP/ONP distinto al declarado; no se permite simultaneidad sin trámites específicos.</div>
+                  <div class="content-text">Documentación y control: Grabar registro, imprimir CIR (constancia de alta) para que trabajador verifique y firme; tomar capturas para respaldo y comprobación en planilla.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=6108" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:41:48)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" data-section="8">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">8</span>
+              <span class="section-title">Actividades pendientes, entrega de tareas y planificación de evaluaciones</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">8.1</span>
+                  <span class="subsection-title">Trabajo práctico, recursos y examen</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Tareas y envío de archivos: Estudiantes deben enviar trabajos corregidos por correo; docentes proporcionarán administradores y RUC en la medida de lo posible para prácticas si no cuentan con empresa propia.</div>
+                  <div class="content-text">Organización de clases y examen: Próxima sesión combinará teoría y práctica; examen teórico-práctico programado con una hora teórica y una práctica, fecha indicada en clase.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=6448" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:47:28)</span> </a>
+                </div>
+              </div>
+            </div>
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">8.2</span>
+                  <span class="subsection-title">Preguntas frecuentes y próximos pasos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Dudas sobre acceso y cuentas: RUC y credenciales de la empresa utilizada en clase no se divulgan por tratarse de contabilidad real; se coordinará la disponibilidad de cuentas administrativas para prácticas.</div>
+                  <div class="content-text">Seguimiento: Se detallará con mayor precisión el llenado de la página SUNAT/ONP y la elaboración del comprobante de pago en la siguiente clase práctica.</div>
+                  <a href="https://www.youtube.com/watch?v=9Z26q3tJOk4&start=6522" class="youtube-link" target="_blank"> Ver en YouTube <span class="timestamp">(01:48:42)</span> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="footer">
       <a href="https://www.edumin.pe/" target="_blank">
         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20BLANCO%20CANVA-mIKMypQ452RzmXVMUadb6mnvPaejXD.png" alt="EDUMIN Logo" class="footer-logo" />
