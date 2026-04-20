@@ -1,0 +1,1678 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <style>
+      /* Estilos de balanceo de texto */
+      .header-content-box,
+      .header-compact-title,
+      .footer,
+      .section-title,
+      .subsection-title {
+        text-wrap: balance;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      :root {
+        /* Colores Principales del Diseño (Acentos y Degradados) */
+        /* ======================================================= */
+        --color-principal: #00beff; /* Cian Brillante para acentos, bordes y el inicio del degradado principal */
+        --color-secundario: #1e50cd; /* Azul Medio, parte final del degradado de acento */
+
+        /* Fondos Oscuros de la Interfaz */
+        /* ======================================================= */
+        --fondo-oscuro-claro: #002a52; /* Fondo de secciones y contenido */
+        --fondo-oscuro-fuerte: #001a33; /* Fondo del encabezado (header) y pie de página (footer) */
+        /* ======================================================= */
+        --fondo-oscuro-medio: #003366; /* Fondo de encabezados y cajas de contenido */
+        --fondo-borde-claro: #004080; /* Bordes ligeros y color de fondo al hacer hover en encabezados */
+        --fondo-sombra-azul-header: #0050a0; /* ¡NUEVO! Sombra en el header */
+
+        /* Colores de Texto y Fondo General del Body */
+        /* ======================================================= */
+        --texto-blanco-1: #ffffff; /* Blanco puro para títulos y texto en fondo muy oscuro */
+        --texto-claro-2: #e6e6e6; /* Texto principal y claro */
+        --texto-medio-3: #cccccc; /* Texto de contenido de item (un poco más tenue) */
+
+        /* ======================================================= */
+        --fondo-body-inicio: #99e5ff; /* Color de inicio del degradado de fondo del body */
+        --fondo-body-fin: #a5b9eb; /* Color de final del degradado de fondo del body */
+
+        /* Colores de Acento Específicos (YouTube, Búsqueda) */
+        /* ======================================================= */
+        --rojo-youtube-claro: #e60000;
+        --rojo-youtube-fuerte: #a30000;
+        --timestamp-youtube: #ffcccc;
+        --fondo-resaltado: #00c339; /* Verde para el fondo del texto buscado */
+
+        /* Bases RGB para Transparencias (RGBA) */
+        /* ======================================================= */
+        --sombra-rgb: 0, 0, 0; /* Negro puro: Usado para sombras generales y profundidad */
+        --acento-rgb: 0, 190, 255; /* Cian Brillante: Usado para brillos y sombras de acento */
+        --rojo-rgb: 230, 0, 0; /* Rojo Puro: Usado para sombras de enlaces de YouTube */
+        /* ======================================================= */
+        --gradient-principal: linear-gradient(135deg, var(--color-principal) 0%, var(--color-secundario) 100%);
+      }
+
+      body {
+        background: linear-gradient(135deg, var(--fondo-body-inicio) 0%, var(--fondo-body-fin) 100%);
+        line-height: 1.2;
+        scroll-behavior: smooth;
+      }
+
+      strong#tituloDiplomado {
+        font-weight: 900;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      @keyframes slideDownSutil {
+        0% {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .header.animacion-inicial {
+        animation: slideDownSutil 0.4s ease-out 1;
+        animation-fill-mode: forwards;
+        will-change: transform, opacity;
+      }
+
+      .header {
+        position: relative;
+        width: 100%;
+        z-index: 1000;
+        padding: 20px;
+        background: linear-gradient(135deg, var(--fondo-oscuro-fuerte) 0%, var(--fondo-oscuro-claro) 100%);
+        box-shadow: 0 5px 15px rgba(var(--sombra-rgb), 0.5);
+        text-align: center;
+        will-change: transform;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .header-text-box {
+        display: grid;
+        gap: 10px;
+        word-break: break-word;
+        margin: 0 15px;
+      }
+
+      .header.compact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+      }
+
+      .header-spacer {
+        display: none;
+        transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .header.compact + .header-spacer {
+        display: block;
+      }
+
+      .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .header.compact .header-top {
+        display: none;
+      }
+
+      .logo {
+        width: 140px;
+        height: auto;
+        margin: 0 15px;
+        transition: all 0.3s ease;
+        vertical-align: middle;
+      }
+
+      .header.compact .logo {
+        width: 90px;
+        margin: 0 10px;
+      }
+
+      .header .logo.compact-logo {
+        display: none;
+      }
+
+      .header.compact .logo.compact-logo {
+        display: block;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+        color: var(--texto-blanco-1);
+        font-weight: 900;
+      }
+
+      .header.compact h1 {
+        font-size: 1rem;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        color: var(--texto-blanco-1);
+        font-weight: 700;
+      }
+
+      .header-content-box {
+        background: var(--gradient-principal);
+        border-radius: 12px;
+        padding: 20px 20px;
+        box-shadow: 0 8px 20px rgba(var(--acento-rgb), 0.6);
+        overflow: hidden;
+        margin-bottom: 15px;
+
+        opacity: 1;
+        transform: translateY(0);
+        will-change: transform;
+        transition:
+          opacity 0.4s ease,
+          transform 0.4s ease;
+      }
+
+      .header.compact .header-content-box {
+        opacity: 0;
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: 0;
+        transform: translateY(-10px);
+      }
+
+      .header-content-box:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(var(--acento-rgb), 0.8);
+      }
+
+      .header-bottom-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .header-second-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .header.compact .header-bottom-row {
+        flex-grow: 1;
+      }
+
+      .logo-and-title {
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(-10px);
+        transition:
+          opacity 0.4s ease,
+          transform 0.4s ease;
+      }
+
+      .header.compact .logo-and-title {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .header.compact .header-bottom-row .logo-and-title {
+        will-change: transform;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        width: 100%;
+        background: var(--gradient-principal);
+        border-radius: 12px;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(var(--acento-rgb), 0.4);
+        gap: 10px;
+      }
+
+      .header.compact .header-bottom-row .logo-and-title:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(var(--acento-rgb), 0.5);
+      }
+
+      .header-compact-title {
+        display: none;
+        color: var(--texto-blanco-1);
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 10px;
+        white-space: normal;
+      }
+
+      .header.compact .header-compact-title {
+        display: block;
+      }
+
+      .search-bar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 450px;
+        background-color: var(--fondo-oscuro-medio);
+        border: 2px solid var(--fondo-borde-claro);
+        border-radius: 30px;
+        box-shadow: 0 4px 10px rgba(var(--sombra-rgb), 0.25);
+        will-change: border-color, background-color;
+        transition:
+          border-color 0.3s ease,
+          box-shadow 0.3s ease,
+          background-color 0.3s ease;
+      }
+
+      .search-bar:focus-within {
+        border-color: var(--fondo-sombra-azul-header);
+        background-color: var(--fondo-borde-claro);
+      }
+
+      .clear-search {
+        cursor: pointer;
+        color: var(--texto-claro-2);
+        padding: 5px;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        display: none;
+        transition: color 0.2s ease;
+        transform: scale(1.5);
+      }
+
+      .clear-search:hover {
+        color: var(--texto-blanco-1);
+      }
+
+      .search-bar input {
+        flex-grow: 1;
+        padding: 10px 18px;
+        font-weight: 400;
+        font-size: 1rem;
+        color: var(--texto-claro-2);
+        background-color: transparent;
+        border: none;
+        outline: none;
+        min-width: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .header.compact .search-bar input {
+        padding: 10px 20px;
+      }
+
+      .search-actions {
+        display: flex;
+        align-items: center;
+      }
+
+      .action-button {
+        background: var(--gradient-principal);
+        border: none;
+        color: var(--texto-blanco-1);
+        padding: 8px 18px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        will-change: transform;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(var(--acento-rgb), 0.4);
+        max-width: 150px;
+        white-space: normal;
+      }
+
+      .action-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(var(--acento-rgb), 0.5);
+      }
+
+      .search-bar .action-button {
+        margin: 5px;
+      }
+
+      .controls {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      @keyframes fadeInUpContent {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .mind-map {
+        transition: margin-top 0.4s ease;
+        margin: 50px 0;
+      }
+
+      .mind-map.animacion-contenido {
+        animation: fadeInUpContent 0.4s ease-out 1 forwards;
+        animation-delay: 0.2s;
+        opacity: 0;
+        will-change: opacity, transform;
+      }
+
+      .section {
+        margin-bottom: 20px;
+        background-color: var(--fondo-oscuro-claro);
+        border-radius: 12px;
+        border: 2px solid var(--fondo-oscuro-medio);
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(var(--sombra-rgb), 0.25);
+        transition: border-color 0.3s ease;
+      }
+
+      .section-header {
+        padding: 20px;
+        background-color: var(--fondo-oscuro-medio);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        will-change: background-color;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--texto-claro-2);
+        margin-right: 10px;
+      }
+
+      .section-number {
+        background: var(--gradient-principal);
+        color: var(--texto-blanco-1);
+        padding: 5px 12px;
+        border-radius: 30px;
+        font-size: 15px;
+        font-weight: 700;
+        margin-right: 15px;
+      }
+
+      .toggle-icon {
+        font-size: 1.2rem;
+        color: var(--texto-claro-2);
+        will-change: transform;
+        transition: transform 0.3s ease;
+      }
+
+      .section.active > .section-header .toggle-icon {
+        transform: rotate(180deg);
+      }
+
+      .section-content {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition:
+          max-height 0.5s ease-out,
+          opacity 0.3s ease-in;
+      }
+
+      .section.active .section-content {
+        max-height: fit-content;
+        padding-bottom: 10px;
+        opacity: 1;
+      }
+
+      .subsection {
+        margin: 15px;
+        background-color: var(--fondo-oscuro-medio);
+        border-radius: 12px;
+        border: 2px solid var(--fondo-borde-claro);
+        overflow: hidden;
+        transition: border-color 0.3s ease;
+      }
+
+      .subsection:hover {
+        border-color: var(--fondo-sombra-azul-header);
+      }
+
+      .subsection:hover .subsection-header {
+        background-color: var(--fondo-sombra-azul-header);
+      }
+
+      .section:hover {
+        border-color: var(--fondo-borde-claro);
+      }
+
+      .section:hover .section-header {
+        background-color: var(--fondo-borde-claro);
+      }
+
+      .subsection-header {
+        padding: 15px;
+        background-color: var(--fondo-borde-claro);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        will-change: background-color;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+      }
+
+      .subsection-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--texto-claro-2);
+        margin-right: 10px;
+      }
+
+      .subsection-number {
+        background: var(--gradient-principal);
+        color: var(--texto-blanco-1);
+        padding: 4px 10px;
+        border-radius: 30px;
+        font-size: 15px;
+        font-weight: 700;
+        margin-right: 12px;
+      }
+
+      .subsection-content {
+        max-height: 0;
+        overflow: hidden;
+        background-color: var(--fondo-oscuro-claro);
+        opacity: 0;
+        transition:
+          max-height 0.5s ease-out,
+          opacity 0.3s ease-in;
+      }
+
+      .subsection.active .subsection-content {
+        max-height: fit-content;
+        padding: 15px;
+        opacity: 1;
+      }
+
+      .subsection.active .toggle-icon {
+        transform: rotate(180deg);
+      }
+
+      .content-item {
+        margin-bottom: 10px;
+        padding: 15px;
+        background-color: var(--fondo-oscuro-medio);
+        border-radius: 12px;
+        border-left: 4px solid var(--color-principal);
+        box-shadow: 0 1px 5px rgba(var(--sombra-rgb), 0.25);
+      }
+
+      .content-text {
+        color: var(--texto-medio-3);
+        margin-bottom: 5px;
+        line-height: 1.4;
+        font-size: 1rem;
+        font-weight: 500;
+        position: relative;
+        padding-left: 15px;
+      }
+
+      .content-text::before {
+        content: "•";
+        color: var(--color-principal);
+        font-weight: 700;
+        display: inline-block;
+        position: absolute;
+        left: 0px;
+      }
+
+      .youtube-link {
+        display: inline-block;
+        padding: 10px 18px;
+        background: linear-gradient(135deg, var(--rojo-youtube-claro) 0%, var(--rojo-youtube-fuerte) 100%);
+        color: var(--texto-blanco-1);
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        line-height: 1rem;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+        box-shadow: 0 2px 5px rgba(var(--rojo-rgb), 0.4);
+        will-change: transform;
+      }
+
+      .youtube-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 3px 7.5px rgba(var(--rojo-rgb), 0.5);
+        will-change: transform;
+      }
+
+      .timestamp {
+        color: var(--timestamp-youtube);
+        font-size: 0.85rem;
+        margin-left: 10px;
+        font-weight: 400;
+      }
+
+      .highlight {
+        background-color: var(--fondo-resaltado);
+        color: var(--texto-blanco-1);
+        font-weight: 700;
+        padding: 4px;
+        border-radius: 6px;
+      }
+
+      .footer {
+        padding: 30px;
+        background: linear-gradient(135deg, var(--fondo-oscuro-fuerte) 0%, var(--fondo-oscuro-claro) 100%);
+        border-top: 1px solid var(--fondo-oscuro-medio);
+        text-align: center;
+        box-shadow: 0 -2px 10px rgba(var(--sombra-rgb), 0.25);
+      }
+
+      .footer-text {
+        color: var(--texto-claro-2);
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .footer-logo {
+        width: 140px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .header-top {
+          flex-direction: column;
+        }
+
+        .logo {
+          margin: 0;
+        }
+
+        .header-text-box {
+          margin: 0;
+        }
+
+        .header h1 {
+          font-size: 1.5rem;
+        }
+
+        .header p {
+          font-size: 1rem;
+        }
+
+        .header.compact .header-bottom-row .logo-and-title {
+          gap: 5px;
+        }
+        .logo,
+        .footer-logo {
+          width: 105px;
+        }
+
+        .header.compact .header-bottom-row {
+          flex-direction: column;
+        }
+
+        .header.compact .header-compact-title {
+          margin: 0 5px;
+          font-size: 0.8rem;
+        }
+
+        .header.compact .logo.compact-logo {
+          width: 65px;
+          margin: 5px;
+        }
+
+        .action-button,
+        .search-bar input,
+        .clear-search {
+          font-size: 0.9rem;
+        }
+
+        .section-header {
+          padding: 15px;
+        }
+
+        .header.compact .controls {
+          flex-direction: row;
+        }
+
+        .section-title {
+          font-size: 1.1rem;
+        }
+
+        .subsection-title {
+          font-size: 1rem;
+        }
+        .section-number,
+        .subsection-number {
+          font-size: 13px;
+        }
+
+        .content-text {
+          font-size: 0.9rem;
+        }
+
+        .youtube-link {
+          font-size: 0.8rem;
+        }
+
+        .timestamp {
+          font-size: 0.75rem;
+        }
+
+        .header.compact .action-button {
+          padding: 6px 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header animacion-inicial">
+      <div class="header-content-box">
+        <div class="header-top">
+          <a href="https://www.edumin.pe/" target="_blank">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20BLANCO%20CANVA-mIKMypQ452RzmXVMUadb6mnvPaejXD.png" alt="EDUMIN Logo" class="logo" />
+          </a>
+          <div class="header-text-box">
+            <h1>
+              <div>DIPLOMADO DE ALTA ESPECIALIZACIÓN EN</div>
+              <strong id="tituloDiplomado" style="display: block"></strong>
+            </h1>
+            <p id="tituloPrincipal"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-bottom-row">
+        <div class="logo-and-title">
+          <a href="https://www.edumin.pe/" target="_blank">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20BLANCO%20CANVA-mIKMypQ452RzmXVMUadb6mnvPaejXD.png" alt="EDUMIN Logo" class="logo compact-logo" />
+          </a>
+          <span class="header-compact-title" id="tituloCompacto"></span>
+        </div>
+        <div class="header-second-row">
+          <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar en el resumen interactivo…" autocomplete="off" />
+            <div class="search-actions">
+              <span class="clear-search" onclick="clearSearch()">&times;</span>
+              <button class="action-button" onclick="searchContent()">Buscar</button>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button class="action-button" onclick="expandAll()">Mostrar todo</button>
+            <button class="action-button" onclick="collapseAll()">Colapsar todo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-spacer"></div>
+
+    <div class="container">
+      <div class="mind-map animacion-contenido" id="mindMap">
+        <div class="section" data-section="1">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">1</span>
+              <span class="section-title">Inicio de la sesión y agenda</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">1.1</span>
+                  <span class="subsection-title">Bienvenida y retomación de tema previo</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Profesor inicia la sesión y espera participantes: Retoma la clase anterior sobre regímenes especiales laborales en Perú. Menciona régimen de micro y pequeña empresa y su objetivo de formalización.</div>
+                  <div class="content-text">Distinción entre formalización total y parcial e informalidad: Informalidad total: no se cumple con beneficios ni remuneración mínima. Informalidad parcial: algunos beneficios sí, otros no.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=10" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:00:10)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">1.2</span>
+                  <span class="subsection-title">Introducción al régimen de construcción civil</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Relación con el régimen pesquero y la característica de intermitencia: No es un trabajo continuo como en banca o retail; es eventual y por obra.</div>
+                  <div class="content-text">Normativa aplicable mencionada: Decreto Legislativo 727 y 1187, Decretos Supremos 005-2020 y 009-2016-TR.</div>
+                  <div class="content-text">Negociación colectiva por rama y participación de la Federación: Convenios anuales que actualizan beneficios y jornales.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=144" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:02:24)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="2">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">2</span>
+              <span class="section-title">Características esenciales del régimen de construcción civil</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">2.1</span>
+                  <span class="subsection-title">Eventualidad y ubicación relativa</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Eventualidad: la obra tiene fecha de término y el trabajo es temporal: Empleos pueden durar meses o años según la obra; finalizada la obra cesa la relación.</div>
+                  <div class="content-text">Ubicación relativa: trabajadores se desplazan entre obras: Movilidad entre regiones o dentro de una provincia, a veces con alojamiento.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=385" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:06:25)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">2.2</span>
+                  <span class="subsection-title">Efecto cancelatorio y naturaleza de los pagos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Montos cancelatorios pagados al término de la relación laboral: Objetivo: evitar deudas por beneficios al finalizar la obra. Pago puede ser diario, semanal o quincenal incluyendo beneficios.</div>
+                  <div class="content-text">Comparación con régimen general respecto a periodicidad de beneficios: En régimen general hay fechas fijas (CTS, gratificaciones); en construcción se paga al cesar.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=713" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:11:53)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="3">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">3</span>
+              <span class="section-title">Sujetos, límites y categorías en el régimen</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">3.1</span>
+                  <span class="subsection-title">Sujetos y límite de aplicación por valorización de la obra</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Aplicación a quien realiza labores de construcción, persona natural o jurídica: No es requisito ser empresa; persona natural puede contratar en este régimen.</div>
+                  <div class="content-text">Límite: obra que exceda 50 UIT obliga aplicación del régimen: Ejemplo numérico: 50 UIT × S/5,150 = S/257,500 (valor citado en la clase). Si obra menor, se pueden aplicar otros regímenes de la empresa (micro, general).</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=851" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:14:11)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">3.2</span>
+                  <span class="subsection-title">Categorías de trabajadores</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Operario: trabajadores especializados (albañiles, carpinteros, electricistas): Es la categoría más alta dentro del régimen.</div>
+                  <div class="content-text">Oficial: ayudantes de operario sin calificación plena: Incluye ayudantes, choferes y mecánicos en función de asistencia.</div>
+                  <div class="content-text">Peón: categoría no calificada, tareas diversas e indiferenciadas: Realiza labores básicas como mezcla y apoyo general.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=1119" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:18:39)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="4">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">4</span>
+              <span class="section-title">Jornal, tabla salarial y negociación colectiva</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">4.1</span>
+                  <span class="subsection-title">Jornal diario y negociación entre CAPECO y Federación</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Jornal basado en días efectivamente trabajados y negociado anualmente: Intervinientes: CAPECO (empleadores) y Federación de Trabajadores (trabajadores).</div>
+                  <div class="content-text">Vigencia anual de la tabla de construcción civil y posibilidad de atrasos en negociación: Las negociaciones pueden retrasarse y generar reclamos por reintegros.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=1337" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:22:17)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">4.2</span>
+                  <span class="subsection-title">Montos de la tabla 2023-2024 y efectos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Valores mínimos por categoría (tabla vigente comentada): Operario: S/84.70 jornal básico. Oficial: S/66.45 jornal básico. Peón: S/59.80 jornal básico. Comparación con remuneración mínima legal diaria (~S/34.16).</div>
+                  <div class="content-text">Incrementos y bonificaciones por especialidad: Ejemplo: soldador homologado 6G con bonificación adicional del 18-20%. Incrementos negociados en 2023: operario +S/4.20, oficial +S/3.30, peón +S/3.00.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=1533" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:25:33)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="5">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">5</span>
+              <span class="section-title">Bonificaciones y asignaciones específicas</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">5.1</span>
+                  <span class="subsection-title">Bonificación Unificada de Construcción (BUC)</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">BUC es una bonificación adicional al jornal diario y se paga siempre: Operario: 32% del jornal básico. Oficial y peón: 30% del jornal básico.</div>
+                  <div class="content-text">BUC no es computable para gratificaciones, asignación escolar, compensación vacacional ni CTS: Cálculo de beneficios se hace únicamente sobre el jornal básico, no sobre BUC.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=4264" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:11:04)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">5.2</span>
+                  <span class="subsection-title">Bonificación por alta especialización</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Se otorga a trabajadores con certificación o habilidad superior (ej.: topógrafo, operario de equipo pesado): Bonificación típica: 9% para ciertas especialidades. Operario de equipo pesado: adicional 10% del jornal básico.</div>
+                  <div class="content-text">Soldador homologado 6G recibe bonificación especial: Soldador 6G: 20% del jornal básico. Soldadores 1G-5G reciben porcentajes menores (ej.: 17% para ciertos niveles).</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=4523" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:15:23)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">5.3</span>
+                  <span class="subsection-title">Bonificación por movilidad y montos fijos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Bonificación por movilidad: monto fijo por día trabajado: Monto vigente: S/8.00 por día efectivamente laborado.</div>
+                  <div class="content-text">No procede cuando el trabajador reside en campamento o la empresa proporciona transporte: Aplicable a nivel nacional y se paga por día trabajado.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=4928" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:22:08)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="6">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">6</span>
+              <span class="section-title">Bonificación por altura y otras bonificaciones</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">6.1</span>
+                  <span class="subsection-title">Bonificación por altura y por altitud</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Bonificación por trabajo en altura: 7% del jornal básico: Aplica a trabajos por encima del cuarto piso o a 10 metros sobre la cota del suelo.</div>
+                  <div class="content-text">Bonificación por altitud: monto fijo por día: Aplica a obras ubicadas a partir de 3,000 m.s.n.m. Monto: S/2.50 por día mientras se mantenga la condición.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=5091" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:24:51)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">6.2</span>
+                  <span class="subsection-title">Otras bonificaciones</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Bonificación nocturna: 25% del jornal básico por jornada nocturna en construcción: Jornada nocturna en construcción: desde las 23:00 hasta las 06:00.</div>
+                  <div class="content-text">Bonificación por contacto con aguas servidas: 20% del jornal básico: Aplica a trabajos de alcantarillado, colectores y obras con contacto directo con aguas servidas.</div>
+                  <div class="content-text">Bonificación por trabajo bajo cota cero (sótanos): monto fijo por día: Monto: S/1.90 por día cuando el trabajo es desde el segundo sótano o ≥5 metros bajo la cota cero.</div>
+                  <div class="content-text">Bonificación por altas temperaturas (mezcla asfáltica): monto fijo por día: Monto: S/3.50 por día para trabajadores de cuadrillas que trabajan con mezcla asfáltica a altas temperaturas.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=5401" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:30:01)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="7">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">7</span>
+              <span class="section-title">Asignaciones y beneficios sociales</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">7.1</span>
+                  <span class="subsection-title">Asignaciones por escolaridad, sepelio y días feriados</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Asignación por escolaridad: S/30 por hijo que curse inicial, primaria, secundaria o estudios técnicos/superiores hasta 22 años: Acreditación: partida de nacimiento y constancia de estudios o certificado de notas según edad.</div>
+                  <div class="content-text">Asignación por sepelio: una UIT para familiares del trabajador fallecido: Ejemplo: 1 UIT = S/5,150 (cuando obra >50 UIT).</div>
+                  <div class="content-text">Asignaciones especiales por trabajar días señalados: Días relevantes: 01/01, Viernes Santo, 01/05, Fiestas Patrias, 25/10 (día del trabajador de construcción civil), 25/12. Pago adicional: asignación equivalente al 10% de la BUC y 10% del VAE por laborar en esos días.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=5731" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:35:31)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">7.2</span>
+                  <span class="subsection-title">Gratificaciones, CTS e indemnizaciones</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Gratificaciones por Fiestas Patrias y Navidad calculadas proporcionalmente: Fiestas Patrias: se calcula sobre siete meses (enero a julio) como 1/7 del proporcional del jornal básico. Navidad: se calcula sobre cinco meses (agosto a diciembre) como 1/5 del proporcional del jornal básico. Pago: una semana antes de la festividad correspondiente.</div>
+                  <div class="content-text">CTS/Indemnización en construcción civil: 15% del jornal básico: Composición: 12% por CTS y 3% por sustitución de utilidades.</div>
+                  <div class="content-text">Descanso semanal y vacacional: Descanso semanal remunerado: 24 horas continuas (dominio de jornal básico proporcional a días trabajados). Vacaciones: 30 días calendario por año trabajado, pago proporcional si no completa el año.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=6045" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:40:45)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="8">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">8</span>
+              <span class="section-title">Vigencia, reintegros y problemas prácticos</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">8.1</span>
+                  <span class="subsection-title">Periodo entre tablas y aplicación retroactiva</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Si la nueva acta se firma después del vencimiento, se aplica tabla anterior y luego reintegros: Caso: tabla vencía 31/05/2023 y acta firmada 06/09/2023; empresas deben reintegrar desde 01/06/2023.</div>
+                  <div class="content-text">Problemas frecuentes en reintegros: Trabajadores cesados pueden no reclamar reintegros por montos pequeños. Trabajadores activos reclamando generan inspecciones y sanciones.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=1773" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:29:33)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">8.2</span>
+                  <span class="subsection-title">Fraccionamiento de obras y límite de 50 UIT</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Norma impide fragmentar la obra para evitar aplicación del régimen: Se toma el valor total de la obra incluyendo excavación, sótano, pisos y acabados.</div>
+                  <div class="content-text">Aplicación a obras públicas y administración directa: Régimen aplicable a organismos del Estado si obra >50 UIT y ejecución por administración directa.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=2176" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:36:16)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="9">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">9</span>
+              <span class="section-title">Formalidades de contratación y protección frente al despido</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">9.1</span>
+                  <span class="subsection-title">Contratación verbal y primacía de la realidad</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">No es obligatorio contrato escrito; se admite contratación verbal: Decreto supremo 003-97-TR admite contratación verbal y la regla es contrato a plazo indeterminado.</div>
+                  <div class="content-text">Primacía de la realidad: existencia del vínculo se determina por hechos (subordinación, remuneración, prestación personal): Inspectores y pruebas pueden declarar la relación laboral pese a falta de contrato escrito.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=2338" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:38:58)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">9.2</span>
+                  <span class="subsection-title">Registro de contratos y excepciones</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">No es requisito registrar contratos modales para construcción civil actualmente: Registro obligatorio quedó limitado a contratos formativos y part-time en reformas anteriores.</div>
+                  <div class="content-text">Contratos modales pueden ser desnaturalizados si carecen de sustento</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=2685" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:44:45)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">9.3</span>
+                  <span class="subsection-title">Despido arbitrario y limitaciones en este régimen</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">En construcción civil no opera la protección típica contra despido arbitrario por su eventualidad: Procedimiento de verificación de despido arbitrario (Zunafil) no aplica en la forma habitual.</div>
+                  <div class="content-text">Excepciones: actos contra la libertad sindical o represalias a representantes de comités: Recomendación práctica: ceses se procuran al final de la semana laboral (sábado) para efectos administrativos.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=2810" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:46:50)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="10">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">10</span>
+              <span class="section-title">Procedimientos de inspección y temas administrativos mencionados</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">10.1</span>
+                  <span class="subsection-title">Verificación de despido arbitrario y tiempos procesales</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Procedimiento de verificación dura cuatro días hábiles y es prioritario: En la práctica local hay demoras en otras inspecciones, pero el despido arbitrario se atiende más rápido.</div>
+                  <div class="content-text">Actuación del inspector incluye careo entre trabajador y empleador y levantamiento de acta</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=2847" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:47:27)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">10.2</span>
+                  <span class="subsection-title">Inspecciones por reintegros y denuncias ante Sunafil</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Reclamos por falta de reintegros son motivo frecuente de denuncias: Sunafil ordena verificaciones y puede exigir pagos retroactivos a empleadores.</div>
+                  <div class="content-text">Problemas típicos: empresas que pagan tabla anterior y no aplican reintegros para trabajadores cesados</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=1908" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:31:48)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="11">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">11</span>
+              <span class="section-title">Registro y fiscalización: RETSE y RENOC</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">11.1</span>
+                  <span class="subsection-title">Registro de Trabajadores de Construcción Civil (RETSE)</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">RETSE acredita la clasificación del trabajador (peón, oficial, operario) y su especialidad: Inscripción exigible para obras cuya valorización individual exceda 50 UIT. Vigencia de la inscripción: 2 años; renovación desde 45 días antes.</div>
+                  <div class="content-text">Es materia de fiscalización y multa si trabajadores no están registrados: Zunafil verifica vigencia y registro en inspecciones. El registro evita que un trabajador no calificado alegue una categoría superior sin sustento.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=6508" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:48:28)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">11.2</span>
+                  <span class="subsection-title">Registro Nacional de Obras de Construcción Civil (RENOC)</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">RENOC: registro administrativo nacional de obras donde se inscriben las obras en ejecución: Administración: Dirección General del Trabajo y gerencias regionales.</div>
+                  <div class="content-text">Obligaciones de contratistas y subcontratistas: Declarar participación dentro de los primeros cinco días hábiles desde el inicio de su ejecución. Herramienta para prevención de violencia en la contratación y para fiscalización.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=6793" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:53:13)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="12">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">12</span>
+              <span class="section-title">Derechos colectivos y obligaciones del empleador</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">12.1</span>
+                  <span class="subsection-title">Derechos colectivos: sindicalización, negociación colectiva y huelga</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Trabajadores de construcción civil tienen derecho a sindicalizarse y a desvincularse del sindicato: Derecho positivo y derecho negativo protegidos.</div>
+                  <div class="content-text">Negociación colectiva se realiza a nivel de rama/federación por eventualidad del trabajo: Federación Nacional de Trabajadores de Construcción Civil negocia con CAPECO y obliga cambios anuales.</div>
+                  <div class="content-text">Huelga reconocida como derecho constitucional para mejorar condiciones laborales</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=6909" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:55:09)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">12.2</span>
+                  <span class="subsection-title">Obligaciones del empleador y seguridad social</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Empleadores deben realizar aportes a salud y demás contribuciones según normativa: Trabajadores del régimen son asegurados obligatorios de salud; no procede sustituir por regímenes de microempresa o seguros alternativos.</div>
+                  <div class="content-text">Pago de aportaciones y cumplimiento de registros (RETSE/RENOC) es requisito fiscalizable y sancionable</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=7173" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(01:59:33)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="13">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">13</span>
+              <span class="section-title">Seguridad social y seguros obligatorios en construcción civil</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">13.1</span>
+                  <span class="subsection-title">Aportes y afiliación al seguro de salud</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Afiliación como asegurados regulares de salud obligatorios y aportes a cargo del empleador: Empleador paga 9% de la remuneración computable vía planilla electrónica. Aporte al seguro de salud no se descuenta del trabajador; es adicional a su remuneración.</div>
+                  <div class="content-text">Registro y comprobación mediante planilla electrónica: Obligación administrativa fiscalizable por autoridades laborales.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=7200" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(02:00:00)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">13.2</span>
+                  <span class="subsection-title">Seguro "Más Vida" y seguro complementario por trabajo de riesgo</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Seguro "Más Vida" obligatorio para obras de cierto tamaño y a cargo del empleador: Aplicable cuando el costo de la obra supera el umbral exigido (mencionado en clase). Prima accesible (ejemplos en clase: S/6–S/8 mensuales) y cubre indemnizaciones por pérdida de miembros y lesiones.</div>
+                  <div class="content-text">Seguro complementario de trabajo de riesgo (SCTR) obligatorio por la naturaleza riesgosa de la actividad: Cobertura en salud: recuperación al 100%, incluye operación, rehabilitación, prótesis, silla de ruedas y medicamentos. Cobertura en pensiones: pensiones por invalidez temporal o permanente según gravedad del accidente.</div>
+                  <div class="content-text">Contratación de ambas pólizas es obligación de las empresas que emplean en este régimen: Prevención de consecuencias económicas para el trabajador tras accidentes graves.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=7225" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(02:00:25)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">13.3</span>
+                  <span class="subsection-title">Sistema de pensiones y descuentos</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Afiliación obligatoria a sistema de pensiones: AFP (sistema privado) u ONP (sistema público): El trabajador debe elegir; si no lo hace, por regla inicial el empleador lo inscribe en el sistema privado (AFP).</div>
+                  <div class="content-text">Aportes a pensiones sí se descuentan del trabajador de su remuneración: Diferencia con aportes de salud y "Más Vida", que son a cargo del empleador sin descuento al trabajador.</div>
+                  <div class="content-text">Rol del empleador en la administración de descuentos y pagos: Empleador realiza descuentos legales y remite las contribuciones correspondientes.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=7377" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(02:02:57)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" data-section="14">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div style="display: flex; align-items: center">
+              <span class="section-number">14</span>
+              <span class="section-title">Transición a detalles numéricos y cierre del segmento</span>
+            </div>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="section-content">
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">14.1</span>
+                  <span class="subsection-title">Anuncio de receso y continuidad de la clase</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Profesor hace receso breve y comunica cambio de fecha de sesión: Recuperación de la sesión del día 27 para el 28; horarios de clase mantenidos.</div>
+                  <div class="content-text">Indicaciones para retorno y aviso de entrada a porcentajes y bonificaciones en la siguiente parte: Se pide a alumnos desconectar cámaras y micrófonos y volver a las 21:00 para continuar con cifras.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=3081" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(00:51:21)</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection-header" onclick="toggleSubsection(this)">
+                <div style="display: flex; align-items: center">
+                  <span class="subsection-number">14.2</span>
+                  <span class="subsection-title">Cierre de la clase y comunicaciones finales</span>
+                </div>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="subsection-content">
+                <div class="content-item">
+                  <div class="content-text">Profesor cierra la sesión, ofrece resolver dudas y toma lista de asistentes: Se registran tres asistentes: Bania Tribeño, Tania Cruzado y Debbie Noelia Palomino Ríos.</div>
+                  <div class="content-text">Anuncio de clases de recuperación y grabación disponible: Recuperación: miércoles 28 por sesión del martes 27; clase grabada disponible para revisión.</div>
+                  <div class="content-text">Invitación a enviar dudas y despedida final: Profesor desea buenas noches y confirma continuidad la próxima semana.</div>
+                  <a href="https://www.youtube.com/watch?v=OvkrV2u2quk&start=7450" class="youtube-link" target="_blank">Ver en YouTube <span class="timestamp">(02:04:10)</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="https://www.edumin.pe/" target="_blank">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20BLANCO%20CANVA-mIKMypQ452RzmXVMUadb6mnvPaejXD.png" alt="EDUMIN Logo" class="footer-logo" />
+      </a>
+      <p class="footer-text">
+        <span style="display: block; font-weight: bold">Contenido desarrollado por EDUMIN - Centro de Capacitación Especializado en Minería, Industria y Negocios</span>
+        <span style="display: block; font-style: italic">Material exclusivo para estudiantes de EDUMIN</span>
+        <a href="https://www.edumin.pe/" target="_blank" style="color: var(--color-principal); text-decoration: none; display: block">https://www.edumin.pe/</a>
+      </p>
+    </div>
+
+    <script>
+      const TITULO_DIPLOMADO = "Legislación Laboral y Elaboración de Planillas".toUpperCase();
+      const TITULO_CLASE = "CLASE 20: REGÍMENES LABORALES ESPECIALES EN PERÚ - 2DA PARTE".toUpperCase();
+
+      const elementoDiplomado = document.getElementById("tituloDiplomado");
+      if (elementoDiplomado) {
+        elementoDiplomado.innerText = TITULO_DIPLOMADO;
+      }
+
+      document.title = TITULO_CLASE;
+      const tituloPrincipal = document.getElementById("tituloPrincipal");
+      if (tituloPrincipal) {
+        tituloPrincipal.innerText = TITULO_CLASE;
+      }
+
+      const tituloCompacto = document.getElementById("tituloCompacto");
+      if (tituloCompacto) {
+        tituloCompacto.innerText = TITULO_CLASE;
+      }
+
+      function toggleSection(element) {
+        const section = element.closest(".section");
+        const wasActive = section.classList.contains("active");
+
+        section.classList.toggle("active");
+
+        if (wasActive) {
+          const subsections = section.querySelectorAll(".subsection");
+          subsections.forEach((subsection) => {
+            subsection.classList.remove("active");
+          });
+        }
+      }
+
+      function toggleSubsection(element) {
+        const subsection = element.closest(".subsection");
+        subsection.classList.toggle("active");
+      }
+
+      function expandAll() {
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section) => {
+          section.classList.add("active");
+        });
+
+        const subsections = document.querySelectorAll(".subsection");
+        subsections.forEach((subsection) => {
+          subsection.classList.add("active");
+        });
+      }
+
+      function collapseAll() {
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section) => {
+          section.classList.remove("active");
+        });
+
+        const subsections = document.querySelectorAll(".subsection");
+        subsections.forEach((subsection) => {
+          subsection.classList.remove("active");
+        });
+      }
+
+      function debounce(func, delay) {
+        let timeout;
+        return function (...args) {
+          const later = () => {
+            clearTimeout(timeout);
+            func.apply(this, args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, delay);
+        };
+      }
+
+      function clearSearch() {
+        const searchInput = document.getElementById("searchInput");
+        const clearBtn = document.querySelector(".search-actions .clear-search");
+        searchInput.value = "";
+        clearBtn.style.display = "none";
+        searchContent();
+        searchInput.focus();
+      }
+
+      const createDiacriticInsensitiveRegex = (term) => {
+        const charMap = {
+          a: "[aáAÁ]",
+          e: "[eéEÉ]",
+          i: "[iíIÍ]",
+          o: "[oóOÓ]",
+          u: "[uúUÚ]",
+        };
+
+        const regexString = term
+          .split("")
+          .map((char) => {
+            const lowerChar = char.toLowerCase();
+            return charMap[lowerChar] || char;
+          })
+          .join("");
+
+        return new RegExp(`(${regexString})`, "gi");
+      };
+
+      function searchContent() {
+        const inputElement = document.getElementById("searchInput");
+        const searchTerm = inputElement.value.trim();
+
+        const searchableElements = document.querySelectorAll(".content-text, .section-title, .subsection-title");
+        let found = false;
+        let firstMatchElement = null;
+
+        document.querySelectorAll(".section.active").forEach((el) => el.classList.remove("active"));
+        document.querySelectorAll(".subsection.active").forEach((el) => el.classList.remove("active"));
+        searchableElements.forEach((element) => {
+          element.innerHTML = element.getAttribute("data-original-text") || element.textContent;
+        });
+
+        if (searchTerm.length < 3) {
+          return;
+        }
+
+        const searchRegex = createDiacriticInsensitiveRegex(searchTerm);
+
+        searchableElements.forEach((element) => {
+          const originalText = element.getAttribute("data-original-text") || element.textContent;
+
+          if (searchRegex.test(originalText)) {
+            found = true;
+
+            element.innerHTML = originalText.replace(searchRegex, `<span class="highlight">$1</span>`);
+
+            const subsection = element.closest(".subsection");
+            if (subsection) {
+              subsection.classList.add("active");
+              subsection.closest(".section")?.classList.add("active");
+            } else if (element.classList.contains("section-title")) {
+              element.closest(".section")?.classList.add("active");
+            }
+
+            if (!firstMatchElement) {
+              firstMatchElement = element;
+            }
+          }
+        });
+
+        if (firstMatchElement) {
+          requestAnimationFrame(() => {
+            firstMatchElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          });
+        } else if (searchTerm.length >= 3) {
+          alert("No se encontraron resultados para: " + searchTerm);
+        }
+      }
+
+      const debouncedSearch = debounce(searchContent, 300);
+
+      document.getElementById("searchInput").addEventListener("input", function () {
+        const clearBtn = document.querySelector(".search-actions .clear-search");
+        clearBtn.style.display = this.value.length > 0 ? "block" : "none";
+        debouncedSearch();
+      });
+
+      document.getElementById("searchInput").addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          clearTimeout(this._timeoutId);
+          searchContent();
+        }
+      });
+
+      // --- Lógica del Header Compacto ---
+      const header = document.querySelector(".header");
+      const headerSpacer = document.querySelector(".header-spacer");
+      let initialHeaderHeight = 0; // Altura del header original
+      let compactHeaderHeight = 0; // Altura del header en modo compacto
+      let scrollTriggerPoint = 0; // Punto de scroll para activar el cambio
+
+      function handleHeaderState() {
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollY > scrollTriggerPoint) {
+          if (!header.classList.contains("compact")) {
+            header.classList.add("compact");
+            headerSpacer.style.height = `${initialHeaderHeight}px`;
+          }
+        } else {
+          if (header.classList.contains("compact")) {
+            header.classList.remove("compact");
+            headerSpacer.style.height = "0px";
+          }
+        }
+      }
+
+      function initializeHeader() {
+        initialHeaderHeight = header.offsetHeight;
+        const headerClone = header.cloneNode(true);
+        headerClone.classList.add("compact");
+        headerClone.style.visibility = "hidden";
+        headerClone.style.position = "absolute";
+        document.body.appendChild(headerClone);
+        compactHeaderHeight = headerClone.offsetHeight;
+        document.body.removeChild(headerClone);
+
+        scrollTriggerPoint = initialHeaderHeight - compactHeaderHeight;
+      }
+
+      document.addEventListener("DOMContentLoaded", initializeHeader);
+      window.addEventListener("scroll", handleHeaderState);
+      window.addEventListener("resize", debounce(initializeHeader, 200));
+    </script>
+  </body>
+</html>
